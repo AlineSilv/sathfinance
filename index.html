@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Sath Finance</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1 id="logo">Sath Finance</h1>
+    </header>
+    <!--<img src="./assets/logo.svg" alt=""-->
+    <main class="container">
+        <section id="balance">
+            <h2 class="b-only">Balance</h2>
+
+            <div class="card">
+                <h3> <span>Entries</span>
+                <img src="./assets/income.svg" alt="Image Entries"></h3>
+                <P>R$ 5.000,00</P>
+            </div>
+            <div class="card">
+                <h3><span>Outputs</span>
+                <img src="./assets/expense.svg" alt="Outputs Image"></h3>
+                <p>R$ 2.850,00</p>
+            </div>
+            <div class="cardtotal">
+                <h3><span>Total</span>
+                <img src="assets/total.svg" alt="Total Image"></h3>
+                <p> R$ 2.150,00</p>
+            </div>
+        </section>
+        <section id="transaction">
+            <h2 class="b-only">Transactions</h2>
+            <a href="#" onclick="Modal.open()" class="button new"> + New Transaction</a>
+            <table id="table-data">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Value</th>
+                        <th>Date</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="description">Light</td>
+                        <td class="expense">- R$ 200,00</td>
+                        <td class="date">09/01/2021</td>
+                        <td><img src="./assets/minus.svg" alt="Remove Transaction"></td>
+                    </tr>
+                    <tr>
+                        <td class="description">Water</td>
+                        <td class="expense">- R$ 200,00</td>
+                        <td class="date">09/01/2021</td>
+                        <td><img src="./assets/minus.svg" alt="Remove Transaction"></td>
+                    </tr>
+                    <tr>
+                        <td class="description">Internet</td>
+                        <td class="expense">- R$ 200,00</td>
+                        <td class="date">09/01/2021</td>
+                        <td><img src="./assets/minus.svg" alt="Remove Transaction"></td>
+                    </tr>
+                    <tr>
+                        <td class="description">Streaming Services</td>
+                        <td class="expense">- R$ 200,00</td>
+                        <td class="date">09/01/2021</td>
+                        <td><img src="./assets/minus.svg" alt="Remove Transaction"></td>
+                    </tr>
+                    <tr>
+                        <td class="description">Gasoline</td>
+                        <td class="expense">- R$ 300,00</td>
+                        <td class="date">09/01/2021</td>
+                        <td><img src="./assets/minus.svg" alt="Remove Transaction"></td>
+                    </tr>
+                    <tr>
+                        <td class="description">Home Rent</td>
+                        <td class="expense">- R$ 1.500,00</td>
+                        <td class="date">09/01/2021</td>
+                        <td><img src="./assets/minus.svg" alt="Remove Transaction"></td>
+                    </tr>
+                    <tr>
+                        <td class="description">University Tuition</td>
+                        <td class="expense">- R$ 250,00</td>
+                        <td class="date">10/01/2021</td>
+                        <td><img src="./assets/minus.svg" alt="Remove Transaction"></td>
+                    </tr>
+                    <tr>
+                        <td class="description">Freelance</td>
+                        <td class="income"> R$ 300,00</td>
+                        <td class="date">15/01/2021</td>
+                        <td><img src="./assets/minus.svg" alt="Remove Transaction"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <section>
+    <div class="modal-overlay">
+        <div class="modal">
+            <div id="form">
+                <h2>New Transaction</h2>
+                <form action="">
+                    <div class="input-group">
+                        <label class="b-only" for="description">Description</label>
+                            <input type="text" id="description"
+                             name="description" placeholder="Description">
+  
+                    </div>
+                    <div class="input-group">
+                        <label class="b-only" for="amount">Value</label>
+                        <input type="number" step="0.01" id="amount"
+                        name="amount" placeholder="0,00">
+                    </div>
+                    <div class="input-group">
+                        <label class="b-only" for="date">Date</label>
+                            <input type="date" id="date"
+                             name="date" placeholder="00/00/0000">
+  
+                    </div>
+                    <div class="input-group actions">
+                        <a onclick="Modal.close()" href="#" class="buttoncancel">Cancel</a>
+                    <button>Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </section>
+    </body>
+
+<footer>Sath Finance</footer>
+
+<script>
+const Modal ={
+    open(){
+        //Open Modal
+        // Addict the class active to modal
+        document.querySelector('.modal-overlay')
+        .classList.add('active')
+
+    },
+    close(){
+        // Close Modal
+        // Remove the class active to modal
+        document.querySelector('.modal-overlay')
+        .classList.remove('active')
+        
+    }
+}
+</script>
+
+</body>
+
+</html>

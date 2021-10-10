@@ -1,0 +1,312 @@
+/*    GLOBAL    */
+*{
+    margin:0;
+    padding:0;
+}
+html{
+  font-size:93.75%;  /*15px mobile*/
+}
+body{
+    background-color: #f0f2f5;
+    font-family: 'Lora', serif;
+}
+
+.container{
+    width: min(80vw, 900px) ;
+    margin:auto;
+}
+
+h2{
+    margin-top: 4.2rem;
+    margin-bottom: 0.8rem;
+    color:gray;
+    font-weight:normal;
+}
+
+/*    HEADER     */
+header{
+    background-color:rgb(38, 151, 123) ;
+    padding: 5rem 0 ;
+    text-align: center;
+}
+#logo{
+    color:white;
+    font-weight: 600;
+}
+
+
+/*   BALANCE   */
+#balance{
+    margin-top:-5em;
+
+}
+
+
+#balance h2{
+    color:white;
+    margin-top:0;
+}
+
+/*   CARD   */
+.card{
+    background:rgb(213, 231, 243);
+    padding:1.5rem 2rem;
+    border-radius:0.25rem;
+    margin-bottom:2rem;
+}
+
+.card h3{
+font-size: 1rem;
+font-weight:normal;
+display: flex;
+align-items: center;   
+justify-content: space-between;
+}
+
+.card p{
+    font-size:2rem;
+}
+
+/*card total*/
+.cardtotal h3{
+    font-size: 1rem;
+    font-weight:normal;
+    display: flex;
+     align-items: center;   
+     justify-content: space-between;
+}
+    
+.cardtotal p{
+        font-size:2rem;
+    }
+    
+.cardtotal {
+background: rgb(5, 148, 88);
+color:white;
+padding:1.5rem 2rem;
+border-radius:0.25rem;
+margin-bottom:2rem;
+
+}
+
+/* LINKS */
+ a {
+color:rgb(5, 109, 74);
+text-decoration:none;
+cursor:pointer;
+
+ }
+ a:hover{
+    color: rgb(44, 214, 157);
+
+}
+
+button{
+    margin-bottom:8rem;
+}
+.button.new{
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/*   TABLE   */
+#transaction{
+    display: block;
+    overflow-x:auto;
+    width:100%;
+}
+#table-data{
+width:100%;
+border-spacing: 0 0.5rem;
+}
+
+table thead tr th:first-child, 
+table tbody tr td:first-child{
+    border-radius:0.30rem 0 0 0.30rem;
+
+    }
+table thead tr th:first-child, 
+table tbody tr td:first-child{
+    border-radius:0 0.30rem 0.30rem 0;
+    
+    }
+    
+
+    table tr{
+        opacity: 0.7 ;
+    }
+    table tr:hover{
+        opacity:1.2;
+    
+    }
+/* description, value date */
+table thead th{
+    background:white;
+    opacity:0.6;
+    color:gray;
+    font-weight:normal;
+    padding:1rem 2rem;
+    text-align:left;
+
+}
+/* description, expense, inocome, date */
+table tbody td{
+    background:white;
+    padding: 1rem 2rem;
+    color:rgb(107, 106, 106);
+}
+
+.description{
+    color:gray;
+}
+.expense{
+    color:rgb(243, 104, 69);
+}
+.income{
+    color:green;
+
+}
+
+.b-only{
+position: absolute;
+width:1px;
+height:1px;
+padding:0;
+margin:-1px;
+overflow:hidden;
+clip: rect(0, 0, 0, 0);
+white-space: nowrap;
+border-width:0;
+
+}
+
+/*  MODAL  */
+.modal-overlay{
+    width:100%;
+    height: 100%;
+    background-color:rgb(0,0,0, 0.7);
+    position:fixed;
+    top:0;
+    /* Aling Items in The Box*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity:0;
+    visibility: hidden;
+}
+
+/* ACTIVE MODAL*/
+.modal-overlay.active {
+    opacity:1;
+    visibility:visible;
+ 
+}
+
+.modal{
+    background: rgba(255, 255, 255, 0.87);
+    padding:2.0rem;
+    position: relative;
+    width:100%;
+    max-width:300px;
+    max-height:300px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+}
+
+/*  FORM MODAL */
+
+#form h2{
+    padding-top: 0;
+    text-align: center;
+}
+
+#form{
+    max-width:400px;
+    width:100%;   
+}
+ input{
+border:none;
+border-radius: 0.2rem;
+padding:0.8rem;
+width: 100%;
+
+}
+
+.input-group{
+margin-top: 0.8rem;
+width:50%;
+
+}
+
+/*input group actions*/
+.input-group.actions{
+display:flex;
+justify-content: space-between;
+align-items: center;
+justify-content: center;
+}
+
+.input-group.actions .button,
+.input-group.actions .button {
+    width: 48%;
+    
+}
+
+/*button save*/
+button{
+width:100%;
+height:35px;
+background:teal;
+border:none;
+padding: 0;
+border-radius:0.30rem;
+cursor:pointer;
+color:white;
+}
+button:hover{
+    background: rgb(14, 185, 185);
+
+}
+
+/* button cancel */
+.buttoncancel{
+color:rgb(223, 14, 14);
+border:0.5px solid rgb(223, 63, 14);
+border-radius:0.30rem;
+height:35px;
+width:100%;
+opacity:0.6;
+display:flex;
+align-items: center;
+justify-content: center;
+position: relative;
+top:-57.2px;
+}
+.buttoncancel:hover{
+    background:rgba(231, 151, 151, 0.712);
+    color:red;
+}
+
+
+/*    FOOTER    */
+
+footer{
+padding: 4rem 0 2rem;
+text-align: center;
+color:gray;
+opacity:0.6;
+}
+
+/*   RESPONSIVE   */
+@media (min-width: 800px){
+    html{
+        font-size: 87.5%;
+    }
+    #balance{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr; /*1/3-50%*/
+        gap: 2rem;
+    }
+}
