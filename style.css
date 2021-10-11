@@ -225,6 +225,7 @@ border-width:0;
 #form{
     max-width:400px;
     width:100%;   
+    
 }
  input{
 border:none;
@@ -237,6 +238,7 @@ width: 100%;
 .input-group{
 margin-top: 0.8rem;
 width:50%;
+
 
 }
 
@@ -264,6 +266,8 @@ padding: 0;
 border-radius:0.30rem;
 cursor:pointer;
 color:white;
+position: relative;
+right:-20px;
 }
 button:hover{
     background: rgb(14, 185, 185);
