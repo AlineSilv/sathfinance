@@ -207,8 +207,8 @@ border-width:0;
     padding:2.0rem;
     position: relative;
     width:100%;
-    max-width:300px;
-    max-height:300px;
+    max-width:500px;
+    max-height:500px;
     display: flex;
     align-items: center;
     justify-content: center; 
@@ -237,7 +237,7 @@ width: 100%;
 
 .input-group{
 margin-top: 0.8rem;
-width:50%;
+width:100%;
 
 
 }
@@ -267,7 +267,7 @@ border-radius:0.30rem;
 cursor:pointer;
 color:white;
 position: relative;
-right:-20px;
+right:-20px
 }
 button:hover{
     background: rgb(14, 185, 185);
